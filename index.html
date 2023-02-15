@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration Page</title>
     <style>
         body {
           background-image: url('perfect.avif');
@@ -17,7 +17,6 @@
           display: flex;
           flex-direction: column;
         }
-
         form {
             align-self: center;
             display: flex;
@@ -35,14 +34,21 @@
             flex-direction: row;
             gap: 2%;
         }
+        #heading {
+            text-align: center;
+            color: rgb(217 163 88 / 96%);
+        }
+        #description {
+            text-align: center
+        }
     </style>
 </head>
 <body>
     <img src="logo.png" alt="Avisi">
     <div>
-    <h1 style = "text-align: center; color: rgb(217 163 88 / 96%)">Book a call</h1> 
+    <h1 id="heading">Book a call</h1> 
     <br>
-    <h5 style = "text-align: center">Book a call slot and our representative will call you within 1 hour of selected time</h5>
+    <h5 id="description">Book a call slot and our representative will call you within 1 hour of selected time</h5>
     <hr width = "50%" size = "4px"><br>
     <div>
         <form action="#" onsubmit="consult(event)">
