@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          background-image: url('perfect.avif');
+          background-repeat: no-repeat;
+          background-size: cover;
+          color: rgb(234 238 227 / 96%);
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+
+        form {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            width: 25%;
+            padding: 1%;
+            margin: 1%;
+        }
+        img {
+            position: absolute;
+        }
+        #div2 {
+            display: flex;
+            flex-direction: row;
+            gap: 2%;
+        }
+    </style>
+</head>
+<body>
+    <img src="logo.png" alt="Avisi">
+    <div>
+    <h1 style = "text-align: center; color: rgb(217 163 88 / 96%)">Book a call</h1> 
+    <br>
+    <h5 style = "text-align: center">Book a call slot and our representative will call you within 1 hour of selected time</h5>
+    <hr width = "50%" size = "4px"><br>
+    <div>
+        <form action="#" onsubmit="consult(event)">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="phone">Phone</label><br>
+            <input type="tel" id="phone" name="phone"><br>
+            <label for="date">Get a call</label><br>
+            <div id="div2">
+                <input type="date" id="date" name="date"><input type="time" id="time" name="time">
+            </div><br>
+            <input type="submit" value="Book">
+        </form>
+    </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
