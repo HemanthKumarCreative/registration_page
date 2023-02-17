@@ -1,3 +1,13 @@
+class Booking {
+  constructor(name, email, phone, date, time) {
+    this.name = name;
+    this.email = email;
+    this.phone = phone;
+    this.date = date;
+    this.time = time;
+  }
+}
+let id = 1;
 function consult(event) {
   event.preventDefault();
   const bookingObject = {
@@ -8,5 +18,13 @@ function consult(event) {
     time: document.getElementById("time").value,
   };
 
-  console.log(bookingObject);
+  const booking = new Booking(
+    bookingObject.name,
+    bookingObject.email,
+    bookingObject.phone,
+    bookingObject.date,
+    bookingObject.time
+  );
+  localStorage.setItem(id, booking);
+  id += 1;
 }
