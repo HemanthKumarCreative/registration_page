@@ -1,13 +1,3 @@
-class Booking {
-  constructor(name, email, phone, date, time) {
-    this.name = name;
-    this.email = email;
-    this.phone = phone;
-    this.date = date;
-    this.time = time;
-  }
-}
-let id = 1;
 function consult(event) {
   event.preventDefault();
   const bookingObject = {
@@ -18,13 +8,18 @@ function consult(event) {
     time: document.getElementById("time").value,
   };
 
-  const booking = new Booking(
-    bookingObject.name,
-    bookingObject.email,
-    bookingObject.phone,
-    bookingObject.date,
-    bookingObject.time
-  );
-  localStorage.setItem(id, booking);
-  id += 1;
+  // console.log(bookingObject);
+  axios
+    .post(
+      "https://crudcrud.com/api/663fdfdd5ea74e7db16f94cd075f7208/apointmentData",
+      bookingObject
+    )
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 }
+
+document.getElementById("post").addEventListener("click", consult);
